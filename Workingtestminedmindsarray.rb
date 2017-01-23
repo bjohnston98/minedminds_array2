@@ -1,6 +1,6 @@
 ##Good One
 require 'minitest/autorun' 
-require_relative 'minedmindsarray.rb' 
+require_relative 'workingarray.rb' 
 
 class TestMMFunctions < Minitest::Test 
 	
@@ -9,7 +9,7 @@ class TestMMFunctions < Minitest::Test
 	end
 
 	def test_2_function_returns_array() #sets value of array
-		results = create_mined_minds_array()
+		results = create_mined_minds_array
 		assert_equal(Array, results.class)
 	end
 
@@ -30,13 +30,6 @@ class TestMMFunctions < Minitest::Test
 	def test_15_function_returns_minedminds
 		results = create_mined_minds_array()
 		assert_equal('mined minds', results[14])
-	end
-	
-	def test_4_returns_4
-		results = create_mined_minds_array
-		assert_equal(4, results[3])
-	
-	puts results #prints anytime
 	end
 	
 end	
