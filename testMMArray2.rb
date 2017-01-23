@@ -9,7 +9,7 @@ class TestMMFunctions < Minitest::Test
 	end
 
 	def test_array_already_has_100_items()
-		results = create_mined_minds_array()
+		results = create_100_element_array()
 		assert_equal(100, results.length)
 	end
 	
@@ -18,21 +18,37 @@ class TestMMFunctions < Minitest::Test
 		assert_equal('mined',results[2]) #array, first pos is 0 so increment
 	end
 
-	def	test_5_function_returns_minds
-		results = create_mined_minds_array()
-		assert_equal('minds', results[4])
+	def test_0_returns_1
+		results = create_100_element_array()
+		assert_equal(1, results[2])
 	end
 
-	def test_15_function_returns_minedminds
-		results = create_mined_minds_array()
-		assert_equal('mined minds', results[14])
+	def test_2_returns_two
+		results = create_100_element_array
+		assert_equal(2, results[1])
 	end
-	
-	def test_4_returns_4
-		results = create_mined_minds_array
-		assert_equal(4, results[3])
-	
-	puts results #prints anytime
+
+	def test_5_returns_minds
+		results = create_100_element_array
+		assert_equal('minds', results[4]
+
+	def test_100_returns_a_mined
+		results = create_100_element_array
+		assert_equal('minds', results[99]  #or results.last
+			
+	end
+
+	def test_20_returns_minds
+		results = create_100_element_array
+		assert_equal('minds', results [20-1])
+	end
+
+	def test_73_returns_minds
+		results = create_100_element_array
+		assert_equal('minds', results [73-1])
+	end
+
+	puts results #prins anytime
 	end
 	
 end	
